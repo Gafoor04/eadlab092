@@ -14,7 +14,6 @@ Below is a list of all the completed lab assignments in this repository. Click t
 | ♛ **Chess Board** | A static visual representation of a chess board using HTML and CSS Grid. | [View Live](https://gafoor04.github.io/eadlab092/ChessBoard.html) |
 | 🧮 **Calculator** | A simple calculator with basic arithmetic operations.        | [View Live](https://gafoor04.github.io/eadlab092/Calculator.html) |
 | 🗓️ **Class Timetable** | A responsive class timetable layout built with Bootstrap.      | [View Live](https://gafoor04.github.io/eadlab092/Timetable.html) |
-| ⏱️ **Timer App** | A functional stopwatch/timer application built with React and Vite. | [View Live](https://gafoor04.github.io/eadlab092/Timer/) |
 
 ---
 
