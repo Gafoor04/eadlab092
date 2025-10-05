@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8; /* Changed to a lighter, cool grey */
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .login {
+            background-color: #ffffff; /* Kept white for a clean look */
+            padding: 2rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Made the shadow a bit softer and bigger */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 25rem;
+            height: 28rem;
+        }
+
+        .login h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 24px;
+            color: #1a202c; /* Changed to a dark slate color */
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+
+        }
+
+        .form label {
+            font-size: 14px;
+            color: #4a5568; /* A softer grey for the labels */
+        }
+
+        .form input {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .loginbtn {
+            padding: 10px;
+            background-color: #3182ce; /* Changed the main button to a nice blue */
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Added a smooth transition effect */
+        }
+
+        .loginbtn:hover {
+            background-color: #2b6cb0; /* A darker blue for the hover effect */
+        }
+
+        .form .reset {
+            position: absolute;
+            cursor: pointer;
+            background-color: #e2e8f0; /* Changed to a light grey, less intrusive */
+            border-radius: 50px;
+            border: none;
+            color: #4a5568; /* Dark grey text for the reset button */
+            padding: 2px 5px;
+            
+            bottom: -2px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>  
+    <div class="main">
+        <div class="login">
+            <img src="https://www.cbit.ac.in/wp-content/uploads/2023/09/CBIT-LOGO.png">
+            <h1>Login</h1>
+            <div class="form">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <button class="loginbtn" onclick="displayAlert()">Login</button>
+                <p>Don't have an Account ? <a href="Register.html" target="_blank">Register</a></p>
+                <button class="reset" onclick="resetData()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displayAlert() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (email === '' || password === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+            if (email === 'admin' && password === 'admin') {
+                alert('Login successful!');
+            } else {
+                alert('Invalid credentials, please try again.');
+            }
+        }
+
+        function resetData() {
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            alert('Fields have been reset.');
+        }
+    </script>
+</body>
+
+</html>
